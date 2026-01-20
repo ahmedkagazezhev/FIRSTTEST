@@ -4,6 +4,7 @@ from pages.customer_login_page import CustomerLoginPage
 from pages.account_page import Account
 from pages.transactions_page import Transaction
 
+#создал базовый класс для тестов чтобы вручную в тестах не прописывать self.login = Login(driver)
 class BaseTest:
 
     login_page : LoginPage

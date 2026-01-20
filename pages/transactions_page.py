@@ -9,6 +9,9 @@ class Transaction(BasePage):
     FIRST_TRANS = ('id','anchor0')
     SECOND_TRANS = ('id','anchor1')
 
+    #перезагружаю страницу тк иногда не появляются транзы и нужно перегзагрзить
+    #беру две транзы и фарширую в нужный формат пункта 10 в 20 строчке
+
     @allure.step('Let is convert our data to CSV')
     def trans_to_csv(self):
         self.driver.refresh()

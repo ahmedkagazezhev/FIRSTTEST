@@ -1,10 +1,13 @@
 class LastCsv:
+
+
     @classmethod
     def lastcsv(cls,n,n2):
         first_tuple_el = n
         second_tuple_el = n2
         return cls.chek(first_tuple_el),cls.chek(second_tuple_el)
 
+    #скорее всего перепишу так как не понятно глазу особо
     @classmethod
     def chek(cls,n):
         transactions_prov1_chek = n.replace(",", "")
