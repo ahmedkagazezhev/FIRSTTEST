@@ -9,6 +9,6 @@ env/
 # IDE
 .idea/
 .vscode/
-
+*.рус
 # Logs
 *.log
