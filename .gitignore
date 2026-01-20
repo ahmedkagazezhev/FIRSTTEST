@@ -1,7 +1,14 @@
-.pytest_cache
-.idea
-.venv
-report
-allure-results
-1.py
-__pycache__
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
