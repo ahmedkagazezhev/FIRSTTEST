@@ -12,3 +12,4 @@ report
 *.рус
 # Logs
 *.log
+.report
