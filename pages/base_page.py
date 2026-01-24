@@ -3,6 +3,7 @@ from allure_commons.types import AttachmentType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.webdriver import WebDriver
+
 class BasePage:
 
     HOME_BUTTON_LOCATOR = ('xpath','//button[text()="Home"]')

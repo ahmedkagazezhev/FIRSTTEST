@@ -25,3 +25,4 @@ class TestProfileFeature(BaseTest):
         self.account_page.click_on_transcantion()
         self.transactions_page.is_opened()
         self.transactions_page.trans_to_csv()
+        self.transactions_page.make_screenshot("Success")
