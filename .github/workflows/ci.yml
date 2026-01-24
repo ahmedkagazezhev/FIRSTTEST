@@ -23,18 +23,25 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        # Для Selenium: Установите Chrome и ChromeDriver
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-        pip install webdriver-manager  # Если используете его для ChromeDriver
+        pip install webdriver-manager
+
+    - name: Install Allure CLI
+      run: |
+        wget https://github.com/allure-framework/allure2/releases/download/2.25.0/allure-2.25.0.tgz  # Последняя версия на момент написания; проверьте актуальную на https://github.com/allure-framework/allure2/releases
+        tar -zxvf allure-2.25.0.tgz
+        export PATH=$PWD/allure-2.25.0/bin:$PATH
+        allure --version  
 
     - name: Run tests
       run: |
-        pytest --alluredir=report/allure-results  # Запуск тестов с Allure
+        pytest --alluredir=report/allure-results
 
     - name: Generate Allure report
       if: always()
       run: |
+        export PATH=$PWD/allure-2.25.0/bin:$PATH
         allure generate report/allure-results -o report/allure-report --clean
 
     - name: Upload Allure report
